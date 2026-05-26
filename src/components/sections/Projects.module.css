@@ -1,0 +1,10 @@
+.projects {
+  /* inherits section-light background */
+}
+
+.grid {
+  margin-top: var(--sp-12);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: var(--sp-5);
+}

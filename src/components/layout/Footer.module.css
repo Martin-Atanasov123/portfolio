@@ -1,0 +1,24 @@
+.footer {
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--sp-8);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.copy,
+.built {
+  font-size: var(--text-sm);
+  color: var(--color-text-3);
+}
+
+.copy strong {
+  color: var(--color-text-2);
+  font-weight: 500;
+}

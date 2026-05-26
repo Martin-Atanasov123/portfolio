@@ -1,0 +1,110 @@
+.slider {
+  margin-top: var(--sp-12);
+}
+
+.viewport {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  cursor: grab;
+  will-change: transform;
+}
+
+.track:active {
+  cursor: grabbing;
+}
+
+.slide {
+  flex-shrink: 0;
+  display: flex;
+  /* one child (e.g. a card) stretches to equalise heights */
+}
+
+.slide > * {
+  width: 100%;
+}
+
+/* ── Controls row ── */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-top: var(--sp-8);
+}
+
+/* ── Numbered indicators ── */
+.indicators {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.indicator {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-text-dark-3);
+  padding-bottom: 4px;
+  transition: color var(--dur-base) var(--ease-out);
+}
+
+.indicator::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.5px;
+  width: 0;
+  background: var(--color-accent);
+  transition: width var(--dur-base) var(--ease-out);
+}
+
+.indicator:hover {
+  color: var(--color-text-dark-2);
+}
+
+.indicatorActive {
+  color: var(--color-accent);
+}
+
+.indicatorActive::after {
+  width: 100%;
+}
+
+/* ── Arrows ── */
+.arrows {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-light-up);
+  color: var(--color-text-dark-1);
+  background: var(--color-surface-elevated);
+  transition: background var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              opacity var(--dur-fast) var(--ease-out);
+}
+
+.arrow:hover:not(:disabled) {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

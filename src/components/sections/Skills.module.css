@@ -1,0 +1,93 @@
+.skills {
+  background: var(--color-bg);
+}
+
+.grid {
+  margin-top: var(--sp-12);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: var(--sp-4);
+}
+
+.category {
+  padding: var(--sp-6);
+  background: var(--color-bg-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+}
+
+.category:hover {
+  border-color: var(--color-border-up);
+  box-shadow: 0 0 24px rgba(37, 99, 235, 0.08);
+}
+
+.categoryExploring {
+  border-style: dashed;
+  background: linear-gradient(135deg, var(--color-bg-2), var(--color-bg-3));
+}
+
+.categoryLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-light);
+  margin-bottom: var(--sp-4);
+}
+
+.categoryExploring .categoryLabel {
+  color: var(--color-text-3);
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px 6px 8px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
+  transition: background var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-spring);
+  cursor: default;
+}
+
+.pill:hover {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.3);
+  color: var(--color-text-1);
+  transform: scale(1.04) translateY(-1px);
+}
+
+.skillIconSvg {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-3);
+  flex-shrink: 0;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.skillIconSvg svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pill:hover .skillIconSvg {
+  color: var(--color-accent-light);
+}

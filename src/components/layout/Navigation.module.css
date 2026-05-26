@@ -1,0 +1,273 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: 100;
+  transition: background var(--dur-slow) var(--ease-out),
+              border-color var(--dur-slow) var(--ease-out),
+              backdrop-filter var(--dur-slow) var(--ease-out);
+  border-bottom: 1px solid transparent;
+}
+
+.header.scrolled {
+  background: rgba(7, 8, 13, 0.88);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border-color: var(--color-border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* ── Logo ── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  transition: background var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out);
+}
+
+.logo:hover .logoMark {
+  background: var(--color-accent-light);
+  box-shadow: 0 0 20px var(--color-accent-glow);
+  transform: scale(1.03);
+}
+
+.logoText {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-1);
+  letter-spacing: -0.01em;
+}
+
+/* ── Desktop nav ── */
+.desktopNav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  position: relative;
+  display: block;
+  padding: var(--sp-2) var(--sp-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-2);
+  transition: color var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: var(--color-text-1);
+}
+
+.navLinkActive {
+  color: var(--color-text-1);
+}
+
+/* Underline reveal — grows left → right on hover / active. */
+.navLinkText {
+  position: relative;
+  display: inline-block;
+}
+
+.navLinkText::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1.5px;
+  width: 0;
+  background: var(--color-accent-light);
+  transition: width 0.25s ease;
+}
+
+.navLink:hover .navLinkText::after {
+  width: 100%;
+}
+
+.navLinkActive .navLinkText::after {
+  width: 100%;
+}
+
+/* ── Right side (CTA + hamburger) ── */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+/* ── CTA Pill ── */
+.ctaPill {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-1);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-base) var(--ease-out);
+}
+
+/* White fill sweeps in left → right on hover. */
+.ctaPill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-text-1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.ctaPillLabel {
+  position: relative;
+  z-index: 1;
+}
+
+.ctaPill:hover {
+  border-color: var(--color-text-1);
+  color: var(--color-bg);
+}
+
+.ctaPill:hover::before {
+  transform: scaleX(1);
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border);
+  transition: background var(--dur-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.hamburgerLine {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  background: var(--color-text-1);
+  border-radius: 1px;
+  transition: transform var(--dur-base) var(--ease-out),
+              opacity var(--dur-base) var(--ease-out);
+  transform-origin: center;
+}
+
+.hamburgerLineTop {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.hamburgerLineMid {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburgerLineBot {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ── Mobile overlay ── */
+.mobileOverlay {
+  position: fixed;
+  inset: 0;
+  top: var(--nav-height);
+  background: rgba(7, 8, 13, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  padding: var(--sp-8) var(--container-pad);
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  width: 100%;
+}
+
+.mobileNavLink {
+  display: block;
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-2);
+  padding: var(--sp-3) 0;
+  transition: color var(--dur-fast) var(--ease-out);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileNavLink:hover {
+  color: var(--color-text-1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .desktopNav {
+    display: none;
+  }
+  .ctaPill {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .logoText {
+    display: none;
+  }
+}
