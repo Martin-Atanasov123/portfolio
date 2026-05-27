@@ -80,12 +80,14 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    label: 'Tooling',
+    label: 'Tooling & AI Workflow',
     skills: [
       { name: 'Figma', icon: 'figma' },
       { name: 'Git', icon: 'git' },
       { name: 'Vitest', icon: 'vitest' },
       { name: 'Node.js', icon: 'node' },
+      { name: 'Claude Code', icon: 'claude' },
+      { name: 'Vibe Coding', icon: 'vibe' },
     ],
   },
   {
@@ -103,7 +105,7 @@ export const skillCategories: SkillCategory[] = [
 export const facts: Fact[] = [
   { icon: 'location', label: 'Sofia, Bulgaria' },
   { icon: 'work', label: 'Open to remote' },
-  { icon: 'edu', label: 'Computer Science' },
+  { icon: 'edu', label: 'SoftUni Graduate' },
 ]
 
 export const navLinks = [
