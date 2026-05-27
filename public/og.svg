@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#2563eb" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="leak" cx="80%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.22"/>
+      <stop offset="70%" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="32%" cy="50%" r="85%">
+      <stop offset="28%" stop-color="#07080d" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#07080d" stop-opacity="0.95"/>
+    </radialGradient>
+    <linearGradient id="alive" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5b8ef0"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#07080d"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#leak)"/>
+  <rect width="1200" height="630" fill="url(#vignette)"/>
+
+  <g font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+    <text x="64" y="100" font-size="28" font-weight="600" letter-spacing="4">
+      <tspan fill="#2563eb" font-family="monospace">//</tspan><tspan fill="#5b8ef0"> FRONTEND ENGINEER</tspan>
+    </text>
+
+    <text x="60" y="210" font-size="100" font-weight="800" letter-spacing="-3" fill="#ffffff">I craft interfaces</text>
+    <text x="60" y="312" font-size="100" font-weight="800" letter-spacing="-3" fill="url(#alive)">that feel alive.</text>
+
+    <text x="64" y="388" font-size="32" font-weight="400" fill="#8e95a9">Design systems, motion, and pixel-perfect,</text>
+    <text x="64" y="430" font-size="32" font-weight="400" fill="#8e95a9">accessible UI.</text>
+
+    <rect x="64" y="505" width="64" height="64" rx="14" fill="#2563eb"/>
+    <text x="96" y="548" font-size="24" font-weight="800" letter-spacing="1" fill="#ffffff" text-anchor="middle">MA</text>
+    <text x="148" y="535" font-size="30" font-weight="600" fill="#ffffff">Martin Atanasov</text>
+    <text x="148" y="568" font-size="22" font-weight="400" fill="#8e95a9">martin-atanasov.netlify.app</text>
+  </g>
+</svg>
