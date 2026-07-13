@@ -61,7 +61,7 @@
 
 .photoFrame {
   position: relative;
-  width: clamp(220px, 35vw, 360px);
+  width: clamp(200px, 35vw, 360px);
 }
 
 .photoPlaceholder {
@@ -73,9 +73,6 @@
     #d4dae8 40%,
     var(--color-accent-muted) 100%
   );
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
   border: 1px solid var(--color-border-light-up);
   position: relative;
@@ -88,43 +85,21 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    transparent 40%,
-    rgba(37, 99, 235, 0.08) 100%
+    transparent 60%,
+    rgba(12, 15, 26, 0.28) 100%
   );
   border-radius: inherit;
+  z-index: 2;
+  pointer-events: none;
 }
 
-/* Shimmer animation */
-.photoPlaceholder::before {
-  content: '';
+.photoImg {
   position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 40%;
-  height: 200%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.5),
-    transparent
-  );
-  transform: skewX(-15deg);
-  animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%   { left: -60%; }
-  100% { left: 130%; }
-}
-
-.initials {
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: rgba(37, 99, 235, 0.18);
-  position: relative;
-  z-index: 1;
-  user-select: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
 }
 
 .photoRing {

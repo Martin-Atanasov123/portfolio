@@ -23,7 +23,7 @@ export interface Fact {
 export const projects: Project[] = [
   {
     id: 'uniput',
-    title: 'УниПът',
+    title: 'UniPut',
     description:
       'A live platform (uniput.eu) that guides Bulgarian prospective students through university admissions — calculating admission scores across universities and specialties from a database of programmes and grading formulas. Fast React front end on a Supabase backend.',
     tags: ['React', 'Vite', 'Supabase', 'PostgreSQL', 'Tailwind'],
@@ -33,12 +33,25 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: 'belot',
+    title: 'Belot',
+    description:
+      'A multiplayer implementation of Belote, the classic Bulgarian card game — real-time gameplay and shared game state built on a TypeScript stack with Supabase, containerised with Docker for easy deployment.',
+    tags: ['TypeScript', 'Supabase', 'Realtime', 'Docker'],
+    github: 'https://github.com/Martin-Atanasov123/belot',
+    live: 'https://belote1.netlify.app/',
+    status: 'Live',
+  },
+  {
     id: 'focuslens',
     title: 'FocusLens',
     description:
       'A privacy-first screen-time tracker that keeps every byte on your own machine. A desktop agent logs activity to local SQLite, paired with a Chrome extension and a companion mobile app — no cloud, no accounts, no tracking.',
     tags: ['TypeScript', 'Chrome Extension', 'SQLite', 'Kotlin'],
     github: 'https://github.com/Martin-Atanasov123/FocusLens',
+    status: 'In development',
+
+    
   },
   {
     id: 'voice-to-text',
@@ -49,22 +62,8 @@ export const projects: Project[] = [
     github: 'https://github.com/Martin-Atanasov123/Voice-to-text',
     status: 'In development',
   },
-  {
-    id: 'belot',
-    title: 'Belot',
-    description:
-      'A multiplayer implementation of Belote, the classic Bulgarian card game — real-time gameplay and shared game state built on a TypeScript stack with Supabase, containerised with Docker for easy deployment.',
-    tags: ['TypeScript', 'Supabase', 'Realtime', 'Docker'],
-    github: 'https://github.com/Martin-Atanasov123/belot',
-  },
-  {
-    id: 'flow-local',
-    title: 'fLow Local',
-    description:
-      'A local-first tool for protecting deep-focus flow, currently in active development — the next idea in a run of privacy-minded, on-device apps.',
-    tags: ['Local-first', 'Productivity'],
-    status: 'In development',
-  },
+  
+  
 ]
 
 export const skillCategories: SkillCategory[] = [
@@ -111,7 +110,7 @@ export const skillCategories: SkillCategory[] = [
 ]
 
 export const facts: Fact[] = [
-  { icon: 'location', label: 'Sofia, Bulgaria' },
+  { icon: 'location', label: 'Pleven, Bulgaria' },
   { icon: 'work', label: 'Open to remote' },
   { icon: 'edu', label: 'SoftUni Graduate' },
 ]

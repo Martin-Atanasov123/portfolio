@@ -4,6 +4,7 @@ import { SectionReveal } from '@/components/ui/SectionReveal'
 import { ClipReveal } from '@/components/ui/ClipReveal'
 import styles from './About.module.css'
 
+
 function IconLocation() {
   return <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
 }
@@ -63,12 +64,12 @@ export function About() {
 
           {/* Photo column — signature circle-expand reveal (AGDS CIRCLE_REVEAL) */}
           <div className={styles.photoCol}>
-            <div className={styles.photoFrame} aria-hidden="true">
+            <div className={styles.photoFrame}>
               <ClipReveal variant="circle" className={styles.photoPlaceholder}>
-                <span className={styles.initials}>MA</span>
+                <img src="/martin_snimka.webp" alt="Martin Atanasov" className={styles.photoImg} />
               </ClipReveal>
               {/* Decorative ring */}
-              <div className={styles.photoRing} />
+              <div className={styles.photoRing} aria-hidden="true" />
             </div>
           </div>
         </div>

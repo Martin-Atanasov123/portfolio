@@ -82,7 +82,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: easeInCubic }}
           >
-            <span className={styles.labelSlash}>//</span> Frontend Engineer
+            <span className={styles.labelSlash}>//</span>i love to create things
           </motion.p>
 
           <motion.h1
@@ -131,7 +131,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.55, ease: easeInCubic }}
           >
             {[
-              { value: 5, suffix: '+', label: 'Years Experience' },
+              { value: 4, suffix: '+', label: 'Years Experience' },
               { value: 30, suffix: '+', label: 'Projects Built' },
               { value: 100, suffix: '%', label: 'TypeScript' },
             ].map((s) => (
