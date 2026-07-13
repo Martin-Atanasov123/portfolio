@@ -3,8 +3,9 @@ export interface Project {
   title: string
   description: string
   tags: string[]
-  github: string
-  live: string
+  github?: string
+  live?: string
+  status?: 'Live' | 'In development'
   featured?: boolean
 }
 
@@ -21,41 +22,48 @@ export interface Fact {
 
 export const projects: Project[] = [
   {
-    id: 'prismatic',
-    title: 'Prismatic UI',
+    id: 'uniput',
+    title: 'УниПът',
     description:
-      'A zero-dependency component library built on CSS custom properties. Accessible primitives, full keyboard navigation, and a constraint-based theming API that compiles to 3 KB of runtime CSS.',
-    tags: ['TypeScript', 'CSS Custom Properties', 'Rollup', 'Storybook'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+      'A live platform (uniput.eu) that guides Bulgarian prospective students through university admissions — calculating admission scores across universities and specialties from a database of programmes and grading formulas. Fast React front end on a Supabase backend.',
+    tags: ['React', 'Vite', 'Supabase', 'PostgreSQL', 'Tailwind'],
+    github: 'https://github.com/Martin-Atanasov123/Uni-put',
+    live: 'https://uniput.eu/',
+    status: 'Live',
     featured: true,
   },
   {
-    id: 'waveform',
-    title: 'Waveform',
+    id: 'focuslens',
+    title: 'FocusLens',
     description:
-      'Real-time audio visualizer using the Web Audio API. Supports multiple visualization modes — oscilloscope, spectrum analyser, and spectrogram — with a timeline scrubber and export to PNG.',
-    tags: ['React', 'Web Audio API', 'Canvas', 'TypeScript'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+      'A privacy-first screen-time tracker that keeps every byte on your own machine. A desktop agent logs activity to local SQLite, paired with a Chrome extension and a companion mobile app — no cloud, no accounts, no tracking.',
+    tags: ['TypeScript', 'Chrome Extension', 'SQLite', 'Kotlin'],
+    github: 'https://github.com/Martin-Atanasov123/FocusLens',
   },
   {
-    id: 'tableau',
-    title: 'Tableau',
+    id: 'voice-to-text',
+    title: 'Voice to Text',
     description:
-      'Collaborative infinite-canvas whiteboard with multiplayer cursors, shape tools, and freehand drawing. Built on CRDT-based state synchronisation for conflict-free real-time editing.',
-    tags: ['React', 'WebSockets', 'Canvas API', 'Node.js'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+      'A speech-to-text converter that turns spoken audio into accurate transcripts using modern speech-recognition models — built in Python with a focus on clean, fast transcription.',
+    tags: ['Python', 'Speech Recognition', 'AI Models'],
+    github: 'https://github.com/Martin-Atanasov123/Voice-to-text',
+    status: 'In development',
   },
   {
-    id: 'nomad',
-    title: 'Nomad',
+    id: 'belot',
+    title: 'Belot',
     description:
-      'Travel planning app with interactive Mapbox maps, AI-assisted itinerary building, and an offline-first architecture via IndexedDB — syncs when reconnected with zero data loss.',
-    tags: ['React', 'Mapbox GL', 'IndexedDB', 'TypeScript'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+      'A multiplayer implementation of Belote, the classic Bulgarian card game — real-time gameplay and shared game state built on a TypeScript stack with Supabase, containerised with Docker for easy deployment.',
+    tags: ['TypeScript', 'Supabase', 'Realtime', 'Docker'],
+    github: 'https://github.com/Martin-Atanasov123/belot',
+  },
+  {
+    id: 'flow-local',
+    title: 'fLow Local',
+    description:
+      'A local-first tool for protecting deep-focus flow, currently in active development — the next idea in a run of privacy-minded, on-device apps.',
+    tags: ['Local-first', 'Productivity'],
+    status: 'In development',
   },
 ]
 

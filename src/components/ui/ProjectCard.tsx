@@ -73,26 +73,42 @@ export function ProjectCard({ project }: Props) {
 
       <div className={styles.body}>
         <div className={styles.header}>
-          <h3 className={styles.title}>{project.title}</h3>
+          <div className={styles.titleRow}>
+            <h3 className={styles.title}>{project.title}</h3>
+            {project.status && (
+              <span
+                className={`${styles.status} ${
+                  project.status === 'Live' ? styles.statusLive : styles.statusWip
+                }`}
+              >
+                {project.status === 'Live' && <span className={styles.statusDot} />}
+                {project.status}
+              </span>
+            )}
+          </div>
           <div className={styles.links}>
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-              aria-label={`${project.title} GitHub repository`}
-            >
-              <IconGithub />
-            </a>
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-              aria-label={`${project.title} live demo`}
-            >
-              <IconExternal />
-            </a>
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+                aria-label={`${project.title} GitHub repository`}
+              >
+                <IconGithub />
+              </a>
+            )}
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+                aria-label={`${project.title} live site`}
+              >
+                <IconExternal />
+              </a>
+            )}
           </div>
         </div>
 

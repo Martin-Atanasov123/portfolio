@@ -33,21 +33,21 @@ export function About() {
             </h2>
             <div className={styles.bio}>
               <p>
-                I'm Martin — a frontend engineer with a deep obsession for the craft of the
-                web. I live at the intersection of design and engineering, spending equal
-                time in Figma and a code editor, translating visual intent into pixel-perfect,
-                accessible, performant reality.
+                I'm Martin — a developer who builds complete, production-ready products end
+                to end. From a Supabase-backed admissions platform serving real students, to
+                privacy-first desktop tools and multiplayer games, I care about shipping things
+                people actually use.
               </p>
               <p>
-                I care about the small things: the 12ms difference in animation easing, the
-                hover state that makes someone smile, the focus ring that makes a site usable
-                for everyone. Good UI should feel inevitable — like it couldn't have been any
-                other way.
+                My edge is speed without sacrificing craft. I work fluently with modern,
+                AI-augmented development — treating today's AI tooling as a genuine force
+                multiplier — which lets me take an idea from concept to a polished, deployed
+                product remarkably fast, often solo.
               </p>
               <p>
-                When I'm not pushing pixels, you'll find me reading about typography, tinkering
-                with WebGL experiments, or trying to convince people that CSS is actually a
-                remarkable piece of engineering.
+                I studied at SoftUni, and I'm endlessly curious about the frontier — whether
+                that's a smarter AI workflow, a WebGL experiment, or squeezing the last 12ms
+                out of an animation curve.
               </p>
             </div>
 

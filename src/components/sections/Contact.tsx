@@ -15,7 +15,7 @@ function IconLinkedin() {
 
 const socialLinks = [
   { label: 'Email', href: 'mailto:matanasov573@gmail.com', icon: <IconEmail /> },
-  { label: 'GitHub', href: 'https://github.com', icon: <IconGithub /> },
+  { label: 'GitHub', href: 'https://github.com/Martin-Atanasov123', icon: <IconGithub /> },
   { label: 'LinkedIn', href: 'https://linkedin.com', icon: <IconLinkedin /> },
 ]
 

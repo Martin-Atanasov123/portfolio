@@ -48,12 +48,59 @@
   gap: var(--sp-4);
 }
 
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
 .title {
   font-size: var(--text-xl);
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--color-text-dark-1);
   line-height: 1.2;
+}
+
+/* ── Status badge ── */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.statusLive {
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.28);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.7);
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.statusWip {
+  color: var(--color-accent);
+  background: var(--color-accent-muted);
+  border: 1px solid rgba(37, 99, 235, 0.22);
 }
 
 .links {
